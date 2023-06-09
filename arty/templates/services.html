@@ -1,0 +1,28 @@
+{% load static %}
+{% include 'navbar.html' %}
+<br/><br/><br/><br/><br/><br/><br/>
+<body class="page-section bg-secondary text-white mb-0" id="Services">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-white">Services</h2><br/><br/><br/>
+        <div class="row justify-content-center">
+            {% for service in services %}
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-secondary">
+                                    <p><strong>{{service.nom}}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+            
+        </div>
+    </div>
+    
+</body>
